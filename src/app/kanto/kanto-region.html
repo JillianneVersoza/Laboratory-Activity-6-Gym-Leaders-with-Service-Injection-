@@ -1,0 +1,5 @@
+<div class="leaders-grid">
+  @for (leader of kantoData(); track leader.name) {
+    <app-leader-info [leader]="leader"></app-leader-info>
+  }
+</div>

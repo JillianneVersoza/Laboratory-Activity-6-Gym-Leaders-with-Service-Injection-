@@ -1,0 +1,37 @@
+<div class="leader-card-glow">
+  <div class="card-inner">
+    <div class="card-header">
+      <img [src]="leader()?.badge" class="badge-sprite" alt="Badge" />
+      <div class="header-text">
+        <h3>{{ leader()?.name }}</h3>
+        <span class="type-tag">{{ leader()?.Type }} Type</span>
+      </div>
+    </div>
+
+    <div class="image-frame">
+      <img [src]="leader()?.image" class="trainer-img" [alt]="leader()?.name" />
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-item"><span>📍</span> {{ leader()?.location }}</div>
+      <div class="stat-item"><span>✨</span> Lvl {{ leader()?.level }}</div>
+    </div>
+
+    <div class="team-section">
+      <p class="section-label">Battle Team</p>
+      <div class="pokemon-row">
+        <div *ngFor="let poke of leader()?.Pokemon" class="poke-icon">
+          <img [src]="'https://img.pokemondb.net/sprites/black-white/anim/normal/' + poke.toLowerCase().replace(' ', '-') + '.gif'" />
+        </div>
+      </div>
+    </div>
+
+    <button class="cute-toggle-btn" (click)="toggleMotto()">
+      {{ isMottoVisible() ? 'Hide' : 'Show' }} Monologue ♡
+    </button>
+
+    <div *ngIf="isMottoVisible()" class="motto-bubble">
+      <p>"{{ leader()?.motto }}"</p>
+    </div>
+  </div>
+</div>

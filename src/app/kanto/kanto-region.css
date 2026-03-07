@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+
+:root {
+  --bg-main: #fff1f6;
+  --bg-panel: #ffffff;
+  --border-soft: #f3cfe0;
+
+  --text-main: #4a2c3a;
+  --text-muted: #7a4b5d;
+
+  --accent-pink: #f472b6;
+  --accent-lavender: #c084fc;
+}
+
+/* ===== REGION ===== */
+.region-wrapper {
+  min-height: 100vh;
+  padding: 4rem 6%;
+  background:
+    radial-gradient(circle at top right, #fbcfe8, transparent 45%),
+    radial-gradient(circle at bottom left, #f5d0fe, transparent 45%),
+    linear-gradient(180deg, #fff1f6, #fdf2f8);
+  font-family: 'Baloo 2', cursive;
+  color: var(--text-main);
+}
+
+.region-header {
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+  padding: 2.5rem;
+  background: #ffa9f1;
+  border: 2px solid var(--border-soft);
+  border-radius: 28px;
+  text-align: center;
+}
+
+.region-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--accent-pink);
+}
+
+.region-header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* ===== GRID ===== */
+.leader-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===== CARD ===== */
+.leader-card {
+  position: relative;
+  background: #f5afeb;
+  border: 2px solid var(--border-soft);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(244, 114, 182, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-7px);
+}
+
+.badge-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+}
+
+/* ===== LEADER INFO ===== */
+.leader-info {
+  padding: 1.6rem;
+  text-align: center;
+}
+
+.leader-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.type-pill {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: #e4a4f8;
+}
+
+/* ===== TRAINER ===== */
+.trainer-box {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to bottom, #fde2f3, #f3b4ee);
+}
+
+.trainer-sprite {
+  height: 150px;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.2));
+}
+
+/* ===== DETAILS ===== */
+.gym-details {
+  padding: 1.3rem 1.6rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: #f1c1ef;
+}
+
+/* ===== TEAM ===== */
+.team-box {
+  padding: 1.4rem 1.6rem;
+  background: #fab9f7;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.pokemon-chip {
+  background: #e091cd;
+  border: 2px solid #9b2c60;
+  border-radius: 18px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.pokemon-chip img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 6px;
+}
+/* ===== LEADER INFO COMPONENT (KANTO) ===== */
+app-leader-info {
+  display: block;
+  margin-top: 1rem;
+  background: #fde2f3;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 2px #f472b6;
+}
+
+app-leader-info .leader-info-wrapper {
+  font-family: 'Baloo 2', cursive;
+  color: var(--text-main);
+}
+
+app-leader-info .desc-btn {
+  background: #f472b6;
+}
+
+app-leader-info .desc-btn:hover {
+  background: #ec4899;
+}
+.leaders-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
