@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HoennRegion } from './hoenn-region';
 
-import { HomeComponent } from './home';
-
-describe('Home', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('HoennRegion', () => {
+  let component: HoennRegion;
+  let fixture: ComponentFixture<HoennRegion>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HomeComponent]
+      imports: [HoennRegion]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(HoennRegion);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
